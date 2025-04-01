@@ -1,0 +1,40 @@
+{
+    "rewrites": [
+      {
+        "source": "/view-index",
+        "destination": "/view-index/index.html"
+      },
+      {
+        "source": "/view",
+        "destination": "/view/product.html"
+      },
+      {
+        "source": "/view/product-detail",
+        "destination": "/view/product-detail.html"
+      },
+      {
+        "source": "/view-shoppingcart/cart",
+        "destination": "/view-shoppingcart/cartWeb.html"
+      },
+      {
+        "source": "/view-shoppingcart/emptycart",
+        "destination": "/view-shoppingcart/emptyCart.html"
+      },
+      {
+        "source": "/view-shoppingcart/payment",
+        "destination": "/view-shoppingcart/payment.html"
+      },
+      {
+        "source": "/view-shoppingcart/policy",
+        "destination": "/view-shoppingcart/shippingPolicy.html"
+      },
+      {
+        "source": "/img-product/(.*)",
+        "destination": "/img-product/$1"
+      },
+      {
+        "source": "/database/(.*)",
+        "destination": "/database/$1"
+      }
+    ]
+  }

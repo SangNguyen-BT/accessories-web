@@ -69,7 +69,31 @@ const infor = {
   phone: 0,
 };
 
+function validateForm() {
+  const userInput = [...document.querySelectorAll(".form-control")];
+  userInput.pop();
+
+  let isValid = true;
+
+  userInput.forEach((element) => {
+    if (element.hasAttribute("required") && !element.value.trim()) {
+      isValid = false;
+      element.classList.add("is-invalid");
+    } else {
+      element.classList.remove("is-invalid");
+    }
+  });
+
+  return isValid;
+}
+
 function payNow() {
+
+  if (!validateForm()) {
+    alert("Xin hãy điền đầy đủ thông tin!");
+    return;
+  }
+
   const userInput = [...document.querySelectorAll(".form-control")];
   userInput.pop();
 
@@ -81,6 +105,9 @@ function payNow() {
   }
   userInformation.push(infor);
   localStorage.setItem("userInformation", JSON.stringify(userInformation));
+
+  const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+  modal.show();
 }
 
 
@@ -106,16 +133,9 @@ function showBoard() {
        <div class="col-md-9 text-secondary">${element.address}</div></div>
        <hr>
         <div class="row confirmInfor">
-       <div class="col-md-3"><h6>Address 2</h6></div>
-       <div class="col-md-9 text-secondary">${element.address2}</div></div>
-       <hr>
-        <div class="row confirmInfor">
        <div class="col-md-3"><h6>City</h6></div>
        <div class="col-md-9 text-secondary">${element.city}</div></div>
-       <hr>
         <div class="row confirmInfor">
-       <div class="col-md-3"><h6>Postal Code</h6></div>
-       <div class="col-md-9 text-secondary">${element.postal}</div></div>
          `;
 
     email += `${element.email}`;

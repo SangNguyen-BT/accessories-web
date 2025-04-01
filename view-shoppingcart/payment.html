@@ -41,13 +41,6 @@
                 <div class="error-message"></div>
               </div>
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  style="cursor: pointer;">
-                <label class="form-check-label" for="flexCheckDefault"  style="cursor: pointer;">
-                    Email me with news and offers
-                </label>
-              </div><br>
-
               <div class="col">
                 <label for="exampleFormControlInput1" class="form-label"><strong>Delivery</strong></label>
                 <div class="form-floating">
@@ -73,19 +66,12 @@
                 <label for="inputAddress" class="form-label"></label>
                 <input type="text" class="form-control" name="address" id="inputAddress" placeholder="Address" required>
                 <div class="error-message"></div>
-              </div>
-              <div class="col-12">
-                <label for="inputAddress2" class="form-label"></label>
-                <input type="text" class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, suite, etc. (optional)">
               </div><br>
 
               <div class="row g-3">
                 <div class="col-sm-7">
                   <input type="text" class="form-control" name="city" placeholder="City" aria-label="City" required>
                   <div class="error-message"></div>
-                </div>
-                <div class="col-sm">
-                  <input type="text" class="form-control" name="postal" placeholder="Postal code (optional)" aria-label="Postal code (optional)">
                 </div>
               </div><br>
 
@@ -98,14 +84,6 @@
                   </button>
               </div><br>
               <div class="error-message"></div>
-              <div class="col-12">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck" style="cursor: pointer;">
-                  <label class="form-check-label" for="gridCheck" style="cursor: pointer;">
-                    Save this information for next time
-                  </label>
-                </div>
-              </div><br>
 
               <div class="shippingMethod">
                 <label for="exampleFormControlInput1" class="form-label"><strong>Shipping Method</strong></label>
@@ -134,7 +112,7 @@
               </div><br>
 
               
-                <button type="button" onclick="payNow()" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%; margin-bottom: 40px; padding: 20px 0;">
+                <button type="button" onclick="payNow()" class="btn btn-dark" style="width: 100%; margin-bottom: 40px; padding: 20px 0;">
                   Thanh Toán Ngay
                 </button>
               </form>    
@@ -164,16 +142,11 @@
 
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sửa lại thông tin</button>
-                        <button type="button" id="btnReset" class="btn btn-primary"><a href="../view/product.html" onclick="reset()" style="color: white; text-decoration: none;">Xác nhận thanh toán</a></button>
+                        <button type="button" id="btnReset" class="btn btn-primary"><a href="../view-index/index.html" onclick="reset()" style="color: white; text-decoration: none;">Xác nhận thanh toán</a></button>
                       </div>
                     </div>
                   </div>
                 </div>
-
-              
-
-          
-
 
           <div class="col" style="border-left: 1px solid #dedede;">
             <div class="fixed-side-checkOut" style="margin-top: 40px;">
@@ -207,7 +180,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    <!-- <script src="./confirmPay.js"></script> -->
     <script src="./payment.js"></script>
 </body>
 </html>

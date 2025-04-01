@@ -1,9 +1,12 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
-      "destination": "/view-index/index.html"
-    },
+      "destination": "/view-index/index.html",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
     {
       "source": "/view-index",
       "destination": "/view-index/index.html"
